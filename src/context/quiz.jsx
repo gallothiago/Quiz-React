@@ -1,13 +1,15 @@
 import { createContext, useReducer } from "react";
-import questions from '../data/questions'
+import questions from '../data/questions_complete'
 import Question from "../components/Question";
 
-const STAGES = ["Start", "Playing", "End"]
+const STAGES = ["Start", "Category", "Playing", "End"]
 
 const initialState = {
     gameStage: STAGES[0],
     questions,
     currentQuestion: 0,
+    score: 0,
+    answerSelected: false
 }
 
 const quizReducer = (state, action) => {
@@ -32,13 +34,37 @@ const quizReducer = (state, action) => {
 
         case "CHANGE_QUESTION":
             const nextQuestion = state.currentQuestion + 1
+            let endGame = false
+
+            if (!questions[nextQuestion]) {
+                endGame = true
+            }
 
             return {
                 ...state,
-                currentQuestion: nextQuestion
+                currentQuestion: nextQuestion,
+                gameStage: endGame ? STAGES[2] : state.gameStage,
+                answerSelected: false
             }
-        
 
+        case "NEW_GAME":
+            return initialState
+        
+        case "CHECK_ANSWER":
+            if (state.answerSelected) return state
+
+            const answer = action.payload.answer
+            const option = action.payload.option
+            let correctAnswer = 0
+
+            if (answer === option) correctAnswer = 1
+
+            return {
+                ...state,
+                score: state.score + correctAnswer,
+                answerSelected: option, 
+            }
+            
         default:
             return state
     }
