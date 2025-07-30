@@ -1,8 +1,14 @@
+/* PickCategory.css */
+
 #category {
     text-align: center;
     max-width: 500px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto; /* Centraliza o contêiner #category na página */
+    padding: 0 1rem; 
+
+    /* REMOVA OU COMENTE AS LINHAS ABAIXO! */
+    /* display: flex; */ 
+    /* flex-direction: column; */
 }
 
 #category h2,
@@ -14,14 +20,16 @@
     color: #dbdf1b;
 }
 
-#category {
-    text-align: center;
-    max-width: 500px;
-}
-
-#category h2,
-#category p {
-    margin-bottom: 1rem;
+/* Estilos para o contêiner dos botões */
+.buttons-container {
+    display: flex; /* ESSA É A DIV QUE DEVE SER FLEX */
+    flex-direction: row; /* Para colocar os botões lado a lado */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Alinha os botões verticalmente (se tiverem alturas diferentes) */
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha se não houver espaço */
+    gap: 1rem; /* Adiciona um espaço de 1rem entre os itens flex (botões) */
+    margin-bottom: 2rem; /* Adiciona um espaço abaixo dos botões e antes da imagem */
+    /* border: 1px solid red; /* Para depuração, pode descomentar para ver a área do container */
 }
 
 
@@ -31,5 +39,9 @@
 }
 
 #category button {
-    margin: 1rem;
+    margin: 0.5rem; /* Ajuste a margem ou deixe o 'gap' fazer a maior parte do trabalho */
+    padding: 0.8rem 1.5rem; /* Ajuste de padding, se achar que estão grandes demais */
+    min-width: 150px; /* Define uma largura mínima para os botões se eles ficarem muito pequenos */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura total */
+    color: #1e1bdf;
 }
