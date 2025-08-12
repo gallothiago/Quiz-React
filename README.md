@@ -1,12 +1,85 @@
-# React + Vite
+# Quiz-React (Quiz de Futebol)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação de quiz temática sobre futebol, construída em React com Vite.
 
-Currently, two official plugins are available:
+##  Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Sobre](#sobre)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação e Execução](#instalação-e-execução)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Scripts Disponíveis](#scripts-disponíveis)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Sobre
+
+Este projeto é um quiz interativo sobre futebol, desenvolvido com **React** e configurado com **Vite** para proporcionar uma experiência ágil de desenvolvimento com recarga instantânea (HMR). A estrutura vem com configuração básica de **ESLint** e opções de plugins React para **Fast Refresh** usando Babel ou SWC :contentReference[oaicite:1]{index=1}.
+
+---
+
+## Funcionalidades
+
+- Quiz interativo com perguntas sobre futebol
+- Interface leve, responsiva e amigável
+- Atualização instantânea durante o desenvolvimento (via HMR)
+- Qualidade de código mantida com regras básicas do ESLint
+
+*(Dependendo da implementação concreta, você pode expandir aqui: por exemplo, temporizador, pontuação, navegação entre perguntas, armazenamento local, etc.)*
+
+---
+
+## Tecnologias Utilizadas
+
+- **React** – biblioteca JavaScript para criação de interfaces
+- **Vite** – bundler moderno e rápido, com suporte a HMR
+- **ESLint** – ferramenta de linting para manter padrões de código limpos
+- Possíveis plugins:
+  - `@vitejs/plugin-react` (Babel)
+  - `@vitejs/plugin-react-swc` (SWC) :contentReference[oaicite:2]{index=2}
+
+---
+
+## Pré-requisitos
+
+Certifique-se de ter instalado:
+
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- npm (gerenciador de pacotes padrão) ou Yarn/pnpm (opcional)
+
+---
+
+## Instalação e Execução
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/gallothiago/Quiz-React.git
+   cd Quiz-React
+Instale as dependências:
+
+
+npm install
+Ou, caso use Yarn:
+
+
+yarn
+Inicie a aplicação em modo de desenvolvimento:
+
+
+npm run dev
+Acesse http://localhost:5173 (porta padrão do Vite).
+
+(Opcional) Build de produção:
+
+
+npm run build
+Executar build localmente (preview):
+
+
+npm run preview
+
+
