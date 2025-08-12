@@ -82,4 +82,32 @@ Executar build localmente (preview):
 
 npm run preview
 
+Scripts Disponíveis
+Script	Descrição
+npm run dev	Inicia servidor de desenvolvimento com HMR
+npm run build	Gera versão otimizada para produção
+npm run preview	Executa servidor local para ver o build
+npm run lint	Executa ESLint (se configurado como script)
+
+(Adapte a tabela caso existam scripts adicionais.)
+
+Contribuição
+Contribuições são bem-vindas! Se deseja colaborar:
+
+Faça um fork deste repositório.
+
+Crie uma branch com sua feature: git checkout -b minha-nova-feature
+
+Realize suas alterações, teste e commit: git commit -m "Descrição das alterações"
+
+Envie sua branch para o GitHub: git push origin minha-nova-feature
+
+Abra um Pull Request detalhado para discussão.
+
+Licença
+Este projeto está sob licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+Contato
+Se quiser mais informações, entre em contato com o autor através do perfil GitHub.
+
 
